@@ -667,6 +667,10 @@ details summary
   margin-top: 1rem;
 }
 
+.mb-20 {
+  margin-bottom: 5rem;
+}
+
 .block {
   display: block;
 }
