@@ -1,0 +1,194 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import './fonts.css';
+
+@layer base
+{
+    html
+    {
+        @apply font-inter;
+    }
+    details summary
+    {
+        list-style: none;
+    }
+    .header-2
+    {
+        @apply text-white text-center text-3xl font-bold mt-16;
+    }
+}
+
+@layer components
+{
+    .back
+    {
+        position: absolute;
+        z-index: -10;
+    }
+    .bg-gradient-black
+    {
+        background: linear-gradient(to bottom right, #111, #112);
+    }  
+}
+
+@layer utilities
+{
+    @keyframes opaque
+    {
+        to
+        {
+            opacity: 0.6;
+        }
+    }
+    .header-anim-config
+    {
+        animation: opaque both;
+        animation-timeline: view();
+        animation-range: contain 20% contain 23%;
+    }
+
+    @keyframes goBack
+    {
+        to
+        {
+            z-index: -10;
+        }
+    }
+    .problem-card
+    {
+        animation: goBack both;
+        animation-timeline: view();
+        animation-range: cover 38%;
+    }
+    .problem-card-adapted
+    {
+        animation: goBack both;
+        animation-timeline: view();
+        animation-range: cover 17%;
+    }
+    @media screen and (min-width:768px)
+    {
+        .problem-card
+        {
+            animation-range: cover 63%;
+        }
+        .problem-card-adapted
+        { 
+            animation-range: cover 63%;
+        }
+    }
+
+    @keyframes appear-card
+    {
+        from
+        {
+            opacity: 0;
+        }
+        to
+        {
+            transform: translateY(-75px);
+            opacity: 1;
+        }
+    }
+    .appearable-card
+    {
+        position: relative;
+        top: 75px;
+        animation: appear-card 1.2s cubic-bezier(.91,.23,.26,1.03) both;
+    }
+
+    .appearable-card:nth-child(2)
+    {
+        animation-delay: 400ms;
+    }
+
+    .appearable-card:nth-child(3)
+    {
+        animation-delay: 800ms;
+    }
+
+    @keyframes header-appear
+    {
+        0%
+        {
+            transform: translateY(-20px);
+            opacity: 0;
+        }
+        50%
+        {
+            opacity: 1;
+        }
+    }
+    .animated-header
+    {
+        animation: header-appear 1.5s cubic-bezier(.91,.23,.26,1.03) both;
+    }
+
+    @keyframes hamburger-button-open-anim-before {
+        to
+        {
+            transform: rotateZ(45deg) !important;
+        }
+    }
+    .hamburger-button-open
+    {
+        background-color: transparent;
+        cursor: default;
+    }
+    .hamburger-button-open::before
+    {
+        transform: rotateZ(45deg) !important;
+    }
+    .hamburger-button-open::after
+    {
+        transform: rotateZ(-45deg) !important;
+    }
+    
+    @keyframes expand-line
+    {
+        from
+        {
+            width: 0;
+        }
+        to
+        {
+            width: 13rem;
+        }
+    }
+    .expand
+    {
+        
+        animation: expand-line both;
+        animation-timeline: view();
+        animation-range: cover 1% cover 20%;
+    }
+    .hovered-service
+    {
+        transition-timing-function:cubic-bezier(0.39, 0.575, 0.565, 1);
+        @apply border-purple-800 pl-3;
+        box-shadow: 0 0 15px #ab2dff56;
+        transform: scale(1.02);
+    }
+    .problem-service
+    {
+        animation: goBack both;
+        animation-timeline: view();
+        animation-range: cover 60%;
+    }
+    .grid-temp
+    {
+        grid-template-columns: 1fr;
+        grid-template-rows: 16rem;
+        grid-auto-rows: 16rem;
+    }
+    .grid-temp-md
+    {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3, 18rem);
+    }
+    .bigger-grid-cell
+    {
+        grid-column: span 2;
+    }
+}

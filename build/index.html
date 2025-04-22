@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog System</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon">
+    <script src="js/script.js"></script>
+</head>
+<body class="bg-gradient-black min-h-dvh h-[255dvh]">
+    <section class="back w-full h-[255dvh] overflow-x-hidden">
+        <section class="back left-1/2 r-1/2 -translate-y-1/4 -translate-x-1/2 w-48 h-48 rounded-full blur-[100px] bg-purple-500 opacity-65"></section>
+        <section class="back left-1/2 translate-x-48 rotate-12 w-48 h-[255dvh] rounded-full blur-[175px] bg-blue-900 opacity-65"></section>
+    </section>
+    <header class="w-full flex justify-between sticky top-0 animated-header">
+        <section class="absolute bg-black z-990 transition-colors opacity-0 header-anim-config h-14 w-full"></section>
+        <div class="h-16 w-[95%] mx-auto flex justify-between">
+        <section class="flex items-center transition-transform hover:scale-105 cursor-pointer z-1000 ml-2">
+            <a href="#start" class="w-full h-full flex items-center">
+            <img src="img/favicon.ico" class="w-9 m-2 relative z-1000">
+            <p class="text-white font-semibold relative z-1000">Calscri</p>
+            </a>
+        </section>
+        <section class="hidden w-[60%] max-w-[500px] md:flex">
+            <nav class="h-full mx-auto w-full flex justify-center">
+                <ul class="list-none text-white flex gap-9 items-center h-full relative z-1000 text-sm lg:gap-14">
+                    <a href="#start" class="w-full h-full flex items-center"><li class="hover:opacity-70 cursor-pointer transition-opacity">Home</li></a>
+                    <li class="hover:opacity-70 cursor-pointer transition-opacity">Services</li>
+                    <li class="hover:opacity-70 cursor-pointer transition-opacity">
+                        Products
+                    </li class="hover:opacity-70 cursor-pointer transition-opacity">
+                    <li class="hover:opacity-70 cursor-pointer transition-opacity">Contact</li>
+                    <li class="hover:opacity-70 cursor-pointer transition-opacity">About</li>
+                </ul>
+            </nav>
+        </section>
+        <section class="text-white hidden items-center gap-4 md:flex">
+            <button class="bg-transparent outline-white border px-5 py-2 rounded-lg cursor-pointer hover:bg-blue-700 relative z-10 transition-colors text-sm">Login</button>
+            <button class="bg-purple-600 px-3.5 py-2 rounded-lg cursor-pointer hover:bg-blue-700 relative z-10 transition-colors text-sm">Sign Up</button>
+        </section>
+        <section class="p-4 pr-6 flex justify-center items-center md:hidden">
+            <button id="hamburger-button" class="w-5 h-[2px] outline relative bg-cyan-50 before:w-5 before:h-[2px] before:bg-cyan-50 before:absolute before:top-0 before:-left-0 before:-translate-y-1.5 after:w-5 after:h-[2px] after:bg-cyan-50 after:absolute after:top-0 after:-left-0 after:translate-y-1.5"></button>
+        </section>
+        </div>
+    </header>
+    <section id="hamburger-menu" class="fixed w-full min-h-52 bg-black hidden flex-col md:hidden select-none">
+        <a href="#start" class="w-full h-full flex-1"><div class="w-[90%] cursor-pointer mx-auto py-3 hover:bg-[#1a1a1a] pl-2 rounded-lg transition-colors"><p class="text-white font-bold">Home</p></div></a>
+        <div class="w-[90%] flex-1 flex items-center cursor-pointer mx-auto transition-colors"><details class="w-full">
+            <summary id="dropdown" class="w-full hover:bg-[#1a1a1a] pl-2 py-3 flex items-center rounded-lg justify-between">
+                <p class="text-white font-bold">Products</p>
+                <p id="dropdown-arrow-down" class="text-white font-bold mr-2 text-xl -mt-4">&#8964;</p>
+                <p id="dropdown-arrow-up" class="text-white hidden font-bold mr-2">&#708;</p>
+            </summary>
+            <ul class="text-slate-300 flex flex-col gap-2">
+                <li class="pl-4 py-1.5 rounded-lg hover:bg-[#1a1a1a] text-sm">Calscri App</li>
+                <li class="pl-4 py-1.5 rounded-lg hover:bg-[#1a1a1a] text-sm">Insta Seo Bio</li>
+                <li class="pl-4 py-1.5 rounded-lg hover:bg-[#1a1a1a] text-sm">Social Hook Kit</li>
+                <li class="pl-4 py-1.5 rounded-lg hover:bg-[#1a1a1a] text-sm">Social Audit Self Help</li>
+            </ul>
+        </details></div>
+        <div class="w-[90%] flex-1 cursor-pointer mx-auto py-3 hover:bg-[#1a1a1a] rounded-lg pl-2 transition-colors"><p class="text-white font-bold">Services</p></div>
+        <div class="w-[90%] cursor-pointer mx-auto "><button class="text-white font-bold w-full text-center bg-blue-600 my-2 h-10 hover:bg-blue-700 rounded-md transition-colors">Login</button></div>
+    </section>
+
+    <main class="mt-20 flex flex-col gap-32">
+        <section id="start" class="flex flex-col w-[90%] max-w-4xl m-auto gap-6 md:mt-48 scroll-m-64">
+            <h1 class="text-3xl text-white font-bold capitalize text-center md:text-4xl lg:text-5xl">Strategic content strategy services <span class="lowercase">for</span><br><span class="text-purple-500 block my-4">business & creators</span></h1>
+            <p class="text-slate-300 text-center md:text-xl lg:text-2xl mb-4">We transform your knowledge into videos that grow, convert, and position you as the go-to expert in your niche.</p>
+            <button class="capitalize w-56 h-12 text-white bg-purple-600 rounded-full text-[18px] m-auto hover:bg-purple-700">Let's Talk Strategy &rarr;</button>
+        </section>
+        <section id="card-container" class="cards problem-card flex flex-col gap-10 md:flex-row md:gap-6 max-w-[1200px] w-[85%] mx-auto">
+        <section class="appearable-card flex-1">
+            <div class="w-full h-56 m-auto rounded-2xl backdrop-blur-sm border-zinc-600 border-2 -rotate-[6deg] flex flex-col transition-transform hover:-rotate-[4deg] hover:scale-105">
+                <div class="opacity-40 w-full h-full absolute bg-zinc-700"></div>
+                <div class="text-purple-500 z-10 pl-6 pt-6 font-semibold w-full flex gap-2">
+                    <svg class="mt-1" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-trending-up"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"></polyline><polyline points="16 7 22 7 22 13"></polyline></svg>
+                    <p>Total Reach</p>
+                </div>
+                <div class="z-10 pl-6 pt-2">
+                    <p class="text-white text-3xl font-bold">1.2M+</p>
+                    <p class="text-slate-300">Last 30 days</p>
+                </div>
+                <div class="z-10 pl-6 pt-2 w-[90%] md:flex-[2]">
+                    <svg class="recharts-surface" width="318" height="80" viewBox="0 0 318 80" style="width: 100%; height: 100%;"><title></title><desc></desc><defs><clipPath id="recharts1-clip"><rect x="5" y="5" height="70" width="308"></rect></clipPath></defs><g class="recharts-layer recharts-line"><path stroke="#a855f7" stroke-width="2" width="308" height="70" fill="none" class="recharts-curve recharts-line-curve" d="M5,51.667C39.222,40,73.444,28.333,107.667,28.333C141.889,28.333,176.111,37.083,210.333,37.083C244.556,37.083,278.778,21.042,313,5"></path><g class="recharts-layer"></g></g></svg>
+                </div>
+            </div>
+        </section>
+        <section class="appearable-card flex-1">
+            <div class="w-full h-auto md:h-full pb-4 m-auto rounded-2xl backdrop-blur-sm border-zinc-600 border-2 rotate-[6deg] flex flex-col transition-transform hover:rotate-[4deg] hover:scale-105">
+                <div class="opacity-40 w-full h-full absolute bg-zinc-700"></div>
+                <div class="text-pink-400 z-10 pl-6 pt-6 font-semibold w-full flex gap-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chart-column"><path d="M3 3v16a2 2 0 0 0 2 2h16"></path><path d="M18 17V9"></path><path d="M13 17V5"></path><path d="M8 17v-3"></path></svg>
+                    <p>Viral Post</p>
+                </div>
+                <div class="z-10 pl-6 pt-2">
+                    <p class="text-white text-3xl font-bold">670K Views</p>
+                    <p class="text-slate-300">On Instagram Reels</p>
+                </div>
+            </div>
+        </section>
+        <section class="appearable-card flex-1">
+            <div class="w-full h-auto md:h-full pb-4 m-auto rounded-2xl backdrop-blur-sm border-zinc-600 border-2 -rotate-[6deg] flex flex-col transition-transform hover:-rotate-[4deg] hover:scale-105">
+                <div class="opacity-40 w-full h-full absolute bg-zinc-700"></div>
+                <div class="text-green-500 z-10 pl-6 pt-6 font-semibold w-full flex gap-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-users"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M22 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+                    <p>Client Wins</p>
+                </div>
+                <div class="z-10 pl-6 pt-2">
+                    <p class="text-white text-3xl font-bold">+85K MRR</p>
+                    <p class="text-slate-300">From 5 client accounts</p>
+                </div>
+            </div>
+        </section>
+        </section>
+        <section class="">
+            <h2 class="header-2">Our Services</h2>
+            <hr class="w-0 mx-auto mt-4 border-none bg-white h-[2px] rounded-lg expand">
+        </section>
+        <section class="grid w-[80%] mx-auto grid-temp gap-5 md:grid-temp-md max-w-[1200px]">
+            <div class="flex flex-col bg-gray-900 border border-slate-600 rounded-xl transition-all justify-between hover:hovered-service relative problem-service pb-5">
+                <img class="max-h-40 object-contain" src="./img/im_services/audit icon transparent.png">
+                <div>
+                <h3 class="text-white font-bold text-lg pl-4">Social Media Audits</h3>
+                <p class="text-gray-400 pl-4 pr-3 text-sm">Uncover hidden issues, missed growth hacks, and get a detailed performance review with actionable fixes.</p>
+                </div>
+            </div>
+
+            <div class="flex flex-col bg-gray-900 border border-slate-600 rounded-xl transition-all justify-between pb-5 hover:hovered-service relative problem-service">
+                <img class="max-h-40 object-contain" src="./img/im_services/script icon transparent.png">
+                <div>
+                <h3 class="text-white font-bold text-lg pl-4">AI-Personalized Scripts</h3>
+                <p class="text-gray-400 pl-4 pr-3 text-sm">Get short-form video scripts customized to your brand, voice, and audience. Zero fluff. All impact.</p>
+                </div>
+            </div>
+
+            <div class="flex flex-col bg-gray-900 border border-slate-600 rounded-xl transition-all justify-between pb-5 hover:hovered-service relative problem-service">
+                <img class="max-h-40 object-contain" src="./img/im_services/content calendar icon.png">
+                <div>
+                <h3 class="text-white font-bold text-lg pl-4">30-Day Content Calendar</h3>
+                <p class="text-gray-400 pl-4 pr-3 text-sm">No more guesswork. A strategic mix of value, trust, and lead-driving content for your niche.</p>
+                </div>
+            </div>
+
+            <div class="flex flex-col bg-gray-900 border border-slate-600 rounded-xl transition-all justify-between pb-5 hover:hovered-service relative problem-service md:bigger-grid-cell">
+                <img class="max-h-40 object-contain" src="./img/im_services/ugc scripting.png">
+                <div>
+                <h3 class="text-white font-bold text-lg pl-4">UGC Scripting & Integration</h3>
+                <p class="text-gray-400 pl-4 pr-3 text-sm">We guide or write content for user-generated videos, turning fans into brand storytellers.</p>
+                </div>
+            </div>
+
+            <div class="flex flex-col bg-gray-900 border border-slate-600 rounded-xl transition-all justify-between pb-5 hover:hovered-service relative problem-service">
+                <img class="max-h-40 object-contain" src="./img/im_services/leadmagnet.png">
+                <div>
+                <h3 class="text-white font-bold text-lg pl-4">Lead Magnet Strategy</h3>
+                <p class="text-gray-400 pl-4 pr-3 text-sm">Plug-and-play templates, checklists & eBooks designed to convert attention into email leads.</p>
+                </div>
+            </div>
+            
+            <div class="flex flex-col bg-gray-900 border border-slate-600 rounded-xl transition-all justify-between pb-5 hover:hovered-service relative problem-service">
+                <img class="max-h-40 object-contain" src="./img/im_services/growth.png">
+                <div>
+                <h3 class="text-white font-bold text-lg pl-4">Growth Analytics Dashboard</h3>
+                <p class="text-gray-400 pl-4 pr-3 text-sm">Track what matters. We highlight what content performs and where to double down.</p>
+                </div>
+            </div>
+
+            <div class="flex flex-col bg-gray-900 border border-slate-600 rounded-xl transition-all justify-between pb-5 hover:hovered-service relative problem-service md:bigger-grid-cell">
+                <img class="max-h-40 object-contain" src="./img/im_services/saas icon.png">
+                <div>
+                <h3 class="text-white font-bold text-lg pl-4">Future SaaS Sneak Peek</h3>
+                <p class="text-gray-400 pl-4 pr-3 text-sm">Our upcoming platform gives you content scripts, scheduling & audits — all automated. Be first to test.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

@@ -1,0 +1,12 @@
+{
+  "name":"calscri-replica-with-tailwind-css",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "tailwind":"npx tailwind -i ./src/input.css -o ./build/css/style.css --watch"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
